@@ -1,6 +1,5 @@
 public class SetterClass {
     private int a;
-
     private String string;
 
     public int getA() {
