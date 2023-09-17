@@ -65,7 +65,19 @@ public class Main {
         if (isPalindrome2(pal)) {
             System.out.printf("%s - palindrome", pal);
         } else {
-            System.out.printf("%s - not palindrome");
+            System.out.printf("%s - not palindrome", pal);
+        }
+
+        System.out.println();
+
+        //********************************************************
+        // Palindrome 3
+        //********************************************************
+        String string = "abcba";
+        if (isPalindrome2(string)) {
+            System.out.printf("%s - palindrome", string);
+        } else {
+            System.out.printf("%s - not palindrome", pal);
         }
 
     }
@@ -84,5 +96,20 @@ public class Main {
 
     public static boolean isPalindrome2(String str) {
         return str.replaceAll("\\W", "").equalsIgnoreCase(new StringBuilder(str.replaceAll("\\W", "")).reverse().toString());
+    }
+
+    private static boolean isPalindrome3(String str) {
+        boolean isPalindrome = false;
+
+        for (int i = 0; i < str.length() / 2; i++) {
+            if (str.charAt(i) == str.charAt(str.length() - 1 - i)) {
+                isPalindrome = true;
+            } else {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        return isPalindrome;
     }
 }
