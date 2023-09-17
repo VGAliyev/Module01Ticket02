@@ -73,8 +73,8 @@ public class Main {
         //********************************************************
         // Palindrome 3
         //********************************************************
-        String string = "adcfsfscda";
-        if (isPalindrome2(string)) {
+        String string = "вовсов";
+        if (isPalindrome3(string)) {
             System.out.printf("%s - palindrome", string);
         } else {
             System.out.printf("%s - not palindrome", string);
@@ -104,6 +104,7 @@ public class Main {
         for (int i = 0; i <= str.length() / 2; i++) {
             if (str.charAt(i) == str.charAt(str.length() - 1 - i)) {
                 isPalindrome = true;
+                System.out.println(str.charAt(i) + " " + str.charAt(str.length() - 1 - i));
             } else {
                 isPalindrome = false;
                 break;
